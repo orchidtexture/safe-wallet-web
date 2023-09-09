@@ -2,7 +2,6 @@ import type { ReactElement } from 'react'
 import { Grid } from '@mui/material'
 import PendingTxsList from '@/components/dashboard/PendingTxs/PendingTxsList'
 import Overview from '@/components/dashboard/Overview/Overview'
-import SafeAppsDashboardSection from '@/components/dashboard/SafeAppsDashboardSection/SafeAppsDashboardSection'
 import CreationDialog from '@/components/dashboard/CreationDialog'
 import { useRouter } from 'next/router'
 import Relaying from '@/components/dashboard/Relaying'
@@ -31,10 +30,6 @@ const Dashboard = (): ReactElement => {
             <Relaying />
           </Grid>
         ) : null}
-
-        <Grid item xs={12}>
-          <SafeAppsDashboardSection />
-        </Grid>
       </Grid>
       {showCreationModal ? <CreationDialog /> : null}
     </>
