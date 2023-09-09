@@ -9,8 +9,7 @@ import classnames from 'classnames'
 import css from './styles.module.css'
 import ConnectWallet from '@/components/common/ConnectWallet'
 import NetworkSelector from '@/components/common/NetworkSelector'
-import SafeTokenWidget, { getSafeTokenAddress } from '@/components/common/SafeTokenWidget'
-import NotificationCenter from '@/components/notification-center/NotificationCenter'
+// import NotificationCenter from '@/components/notification-center/NotificationCenter'
 import { AppRoutes } from '@/config/routes'
 import useChainId from '@/hooks/useChainId'
 import KondorLogo from '@/public/images/kondor_logo.svg'
@@ -26,7 +25,6 @@ type HeaderProps = {
 const Header = ({ onMenuToggle, onBatchToggle }: HeaderProps): ReactElement => {
   const chainId = useChainId()
   const safeAddress = useSafeAddress()
-  const showSafeToken = safeAddress && !!getSafeTokenAddress(chainId)
   const router = useRouter()
 
   // Logo link: if on Dashboard, link to Welcome, otherwise to the root (which redirects to either Dashboard or Welcome)
@@ -67,21 +65,15 @@ const Header = ({ onMenuToggle, onBatchToggle }: HeaderProps): ReactElement => {
         </Link>
       </div>
 
-      {showSafeToken && (
-        <div className={classnames(css.element, css.hideMobile)}>
-          <SafeTokenWidget />
-        </div>
-      )}
-
       {safeAddress && (
         <div className={classnames(css.element, css.hideMobile)}>
           <BatchIndicator onClick={handleBatchToggle} />
         </div>
       )}
 
-      <div className={css.element}>
+      {/* <div className={css.element}>
         <NotificationCenter />
-      </div>
+      </div> */}
 
       <div className={classnames(css.element, css.connectWallet)}>
         <ConnectWallet />
