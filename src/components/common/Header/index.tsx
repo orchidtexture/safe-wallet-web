@@ -1,7 +1,9 @@
 import type { Dispatch, SetStateAction } from 'react'
 import { type ReactElement } from 'react'
 import { useRouter } from 'next/router'
-import { IconButton, Paper } from '@mui/material'
+import { IconButton, Paper, Typography } from '@mui/material'
+import Grid from '@mui/material/Unstable_Grid2'
+
 import MenuIcon from '@mui/icons-material/Menu'
 import classnames from 'classnames'
 import css from './styles.module.css'
@@ -11,7 +13,7 @@ import SafeTokenWidget, { getSafeTokenAddress } from '@/components/common/SafeTo
 import NotificationCenter from '@/components/notification-center/NotificationCenter'
 import { AppRoutes } from '@/config/routes'
 import useChainId from '@/hooks/useChainId'
-import SafeLogo from '@/public/images/logo.svg'
+import KondorLogo from '@/public/images/kondor_logo.svg'
 import Link from 'next/link'
 import useSafeAddress from '@/hooks/useSafeAddress'
 import BatchIndicator from '@/components/batch/BatchIndicator'
@@ -54,7 +56,14 @@ const Header = ({ onMenuToggle, onBatchToggle }: HeaderProps): ReactElement => {
 
       <div className={classnames(css.element, css.hideMobile, css.logo)}>
         <Link href={logoHref} passHref>
-          <SafeLogo alt="Safe logo" />
+          <Grid container spacing={1}>
+            <Grid>
+              <KondorLogo alt="Safe logo" />
+            </Grid>
+            <Grid>
+              <Typography>Kondor[TMP]</Typography>
+            </Grid>
+          </Grid>
         </Link>
       </div>
 
