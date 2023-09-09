@@ -96,7 +96,7 @@ const WebCoreApp = ({
   return (
     <StoreHydrator>
       <Head>
-        <title key="default-title">{'Safe{Wallet}'}</title>
+        <title key="default-title">{'Kondor[TMP]'}</title>
         <MetaTags prefetchUrl={GATEWAY_URL} />
       </Head>
 

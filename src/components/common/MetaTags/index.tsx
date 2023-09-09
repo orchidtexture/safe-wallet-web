@@ -2,20 +2,20 @@ import { IS_PRODUCTION } from '@/config/constants'
 import { ContentSecurityPolicy, StrictTransportSecurity } from '@/config/securityHeaders'
 import { lightPalette, darkPalette } from '@safe-global/safe-react-components'
 
-const descriptionText =
-  'Safe (prev. Gnosis Safe) is the most trusted platform to manage digital assets on Ethereum and multiple EVMs. Over $40B secured.'
-const titleText = 'Safe{Wallet}'
+const descriptionText = 'Unlock your crypto treasury with the Kondor[TMP].'
+const titleText = 'Kondor[TMP]'
 
 const MetaTags = ({ prefetchUrl }: { prefetchUrl: string }) => (
   <>
     <meta name="description" content={descriptionText} />
 
     {/* Social sharing */}
+    {/* TODO: Change social sharing images */}
     <meta name="og:image" content="https://app.safe.global/images/social-share.png" />
     <meta name="og:description" content={descriptionText} />
     <meta name="og:title" content={titleText} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@safe" />
+    <meta name="twitter:site" content="@KondorFinance" />
     <meta name="twitter:title" content={titleText} />
     <meta name="twitter:description" content={descriptionText} />
     <meta name="twitter:image" content="https://app.safe.global/images/social-share.png" />
@@ -35,7 +35,7 @@ const MetaTags = ({ prefetchUrl }: { prefetchUrl: string }) => (
     {/* PWA primary color and manifest */}
     <meta name="theme-color" content={lightPalette.background.main} media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content={darkPalette.background.main} media="(prefers-color-scheme: dark)" />
-    <link rel="manifest" href="/safe.webmanifest" />
+    <link rel="manifest" href="/kondor.webmanifest" />
 
     {/* Favicons */}
     <link rel="shortcut icon" href="/favicons/favicon.ico" />

@@ -25,7 +25,7 @@
 }
 
 .content {
-  background: linear-gradient(-90deg, #10ff84, #5fddff);
+  background: linear-gradient(-90deg, #0079d6, #00d6c9);
   background-size: 200% 200%;
   animation: gradient 15s ease infinite;
   border-radius: 6px;

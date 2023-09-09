@@ -10,6 +10,7 @@ import {
   Accordion,
   useMediaQuery,
   Box,
+  Link,
 } from '@mui/material'
 import { useRouter } from 'next/router'
 import { CREATE_SAFE_EVENTS, LOAD_SAFE_EVENTS } from '@/services/analytics/events/createLoadSafe'
@@ -89,11 +90,14 @@ const NewSafe = () => {
             color="static.main"
             mb={1}
           >
-            Welcome to {'Safe{Wallet}'}
+            Welcome to {'Kondor[TMP]'}
           </Typography>
 
           <Typography mb={5} color="static.main">
-            The most trusted decentralized custody protocol and collective asset management platform.
+            Treasury Management System for crypto-funded companies. Powered by
+            <Link color={'#000'} href={'https://safe.global/core'}>
+              &nbsp;Safe&#123;CORE&#125;
+            </Link>
           </Typography>
 
           <Grid container spacing={3} sx={{ maxWidth: '800px' }}>

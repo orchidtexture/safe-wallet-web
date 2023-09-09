@@ -45,7 +45,7 @@ export const DataWidget = (): ReactElement => {
           </Box>
         }
         className={css.cardHeader}
-        title={<b>{hasData ? 'Work with your data' : 'Already have a Safe Account?'}</b>}
+        title={<b>{hasData ? 'Load your company data' : 'Already have a Safe Account?'}</b>}
         subheader={hasData ? 'Export or import your data' : 'Import your data'}
       />
       <CardContent>
