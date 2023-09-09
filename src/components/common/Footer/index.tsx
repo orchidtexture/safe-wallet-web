@@ -4,9 +4,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import css from './styles.module.css'
 import { AppRoutes } from '@/config/routes'
-import packageJson from '../../../../package.json'
-import AppstoreButton from '../AppStoreButton'
-import ExternalLink from '../ExternalLink'
 import MUILink from '@mui/material/Link'
 import { IS_DEV, IS_OFFICIAL_HOST } from '@/config/constants'
 
@@ -41,29 +38,31 @@ const Footer = (): ReactElement | null => {
     return router.pathname === path ? '' : path
   }
 
+  // TODO: setup terms and cookie policy
+
   return (
     <footer className={css.container}>
       <ul>
         {IS_OFFICIAL_HOST || IS_DEV ? (
           <>
             <li>
-              <Typography variant="caption">&copy;2022–{new Date().getFullYear()} Core Contributors GmbH</Typography>
+              <Typography variant="caption">&copy;2022–{new Date().getFullYear()} Kondor Finance</Typography>
             </li>
-            <li>
+            {/* <li>
               <FooterLink href={getHref(AppRoutes.terms)}>Terms</FooterLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <FooterLink href={getHref(AppRoutes.privacy)}>Privacy</FooterLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <FooterLink href={getHref(AppRoutes.licenses)}>Licenses</FooterLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <FooterLink href={getHref(AppRoutes.imprint)}>Imprint</FooterLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <FooterLink href={getHref(AppRoutes.cookie)}>Cookie policy</FooterLink>
-            </li>
+            </li> */}
             <li>
               <FooterLink href={getHref(AppRoutes.settings.index)}>Preferences</FooterLink>
             </li>
@@ -72,14 +71,11 @@ const Footer = (): ReactElement | null => {
           <li>{'This is an unofficial distribution of Safe{Wallet}'}</li>
         )}
 
-        <li>
+        {/* <li>
           <ExternalLink href={`${packageJson.homepage}/releases/tag/v${packageJson.version}`}>
             v{packageJson.version}
           </ExternalLink>
-        </li>
-        <li>
-          <AppstoreButton placement="footer" />
-        </li>
+        </li> */}
       </ul>
     </footer>
   )
