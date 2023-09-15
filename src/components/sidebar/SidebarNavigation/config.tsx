@@ -17,19 +17,33 @@ export type NavItem = {
   badge?: boolean
 }
 
-export const navItems: NavItem[] = [
-  {
-    label: 'Home',
-    icon: <SvgIcon component={HomeIcon} inheritViewBox />,
-    href: AppRoutes.home,
-  },
+// multiple lists by category
+
+export const dashboardNavItem: NavItem = {
+  label: 'Dashboard',
+  icon: <SvgIcon component={HomeIcon} inheritViewBox />,
+  href: AppRoutes.home,
+}
+
+export const settingsNavItem: NavItem = {
+  label: 'Settings',
+  icon: <SvgIcon component={SettingsIcon} inheritViewBox />,
+  href: AppRoutes.settings.setup,
+}
+
+export const paymentsNavItems: NavItem[] = [
   {
     label: 'Assets',
     icon: <SvgIcon component={AssetsIcon} inheritViewBox />,
     href: AppRoutes.balances.index,
   },
   {
-    label: 'Transactions',
+    label: 'Batch Payments',
+    icon: <SvgIcon component={AssetsIcon} inheritViewBox />,
+    href: AppRoutes.balances.index,
+  },
+  {
+    label: 'History',
     icon: <SvgIcon component={TransactionIcon} inheritViewBox />,
     href: AppRoutes.transactions.history,
   },
@@ -38,25 +52,26 @@ export const navItems: NavItem[] = [
     icon: <SvgIcon component={ABIcon} inheritViewBox />,
     href: AppRoutes.addressBook,
   },
+]
+
+export const fiatNavItems: NavItem[] = [
+  {
+    label: '[coming soon]',
+    icon: <CurrencyExchangeIcon />,
+    href: '#',
+  },
+]
+
+export const defiNavItems: NavItem[] = [
   // {
   //   label: 'Apps',
   //   icon: <SvgIcon component={AppsIcon} inheritViewBox />,
   //   href: AppRoutes.apps.index,
   // },
   {
-    label: 'Fiat [coming soon]',
-    icon: <CurrencyExchangeIcon />,
-    href: '#',
-  },
-  {
-    label: 'DeFi [coming soon]',
+    label: '[coming soon]',
     icon: <HubIcon />,
     href: '#',
-  },
-  {
-    label: 'Settings',
-    icon: <SvgIcon component={SettingsIcon} inheritViewBox />,
-    href: AppRoutes.settings.setup,
   },
 ]
 

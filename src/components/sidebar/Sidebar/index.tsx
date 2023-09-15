@@ -1,5 +1,5 @@
 import { useCallback, useState, type ReactElement } from 'react'
-import { Box, Divider, Drawer, IconButton } from '@mui/material'
+import { Drawer, IconButton } from '@mui/material'
 import ChevronRight from '@mui/icons-material/ChevronRight'
 
 import ChainIndicator from '@/components/common/ChainIndicator'
@@ -37,14 +37,14 @@ const Sidebar = (): ReactElement => {
         {/* Address, balance, copy button, etc */}
         <SidebarHeader />
 
-        <Divider />
+        {/* <Divider /> */}
 
         {/* Nav menu */}
         <SidebarNavigation />
 
-        <Box flex={1} />
+        {/* <Box flex={1} /> */}
 
-        <Divider flexItem />
+        {/* <Divider flexItem /> */}
 
         {/* What's new + Need help? */}
         {/* <SidebarFooter /> */}
