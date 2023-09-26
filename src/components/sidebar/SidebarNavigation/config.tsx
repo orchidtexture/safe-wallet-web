@@ -40,7 +40,7 @@ export const paymentsNavItems: NavItem[] = [
   {
     label: 'Batch Payments',
     icon: <SvgIcon component={AssetsIcon} inheritViewBox />,
-    href: AppRoutes.balances.index,
+    href: AppRoutes.batch.index,
   },
   {
     label: 'History',
@@ -87,6 +87,17 @@ export const transactionNavItems = [
   {
     label: 'Messages',
     href: AppRoutes.transactions.messages,
+  },
+]
+
+export const batchPaymentsNavItems = [
+  {
+    label: 'Create',
+    href: AppRoutes.batch.index,
+  },
+  {
+    label: 'History',
+    href: AppRoutes.batch.index,
   },
 ]
 
