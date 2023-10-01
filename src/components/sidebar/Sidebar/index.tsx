@@ -1,12 +1,11 @@
 import { useCallback, useState, type ReactElement } from 'react'
-import { Box, Divider, Drawer, IconButton } from '@mui/material'
+import { Drawer, IconButton } from '@mui/material'
 import ChevronRight from '@mui/icons-material/ChevronRight'
 
 import ChainIndicator from '@/components/common/ChainIndicator'
 import SidebarHeader from '@/components/sidebar/SidebarHeader'
 import SafeList from '@/components/sidebar/SafeList'
 import SidebarNavigation from '@/components/sidebar/SidebarNavigation'
-import SidebarFooter from '@/components/sidebar/SidebarFooter'
 
 import css from './styles.module.css'
 import { trackEvent, OVERVIEW_EVENTS } from '@/services/analytics'
@@ -38,17 +37,17 @@ const Sidebar = (): ReactElement => {
         {/* Address, balance, copy button, etc */}
         <SidebarHeader />
 
-        <Divider />
+        {/* <Divider /> */}
 
         {/* Nav menu */}
         <SidebarNavigation />
 
-        <Box flex={1} />
+        {/* <Box flex={1} /> */}
 
-        <Divider flexItem />
+        {/* <Divider flexItem /> */}
 
         {/* What's new + Need help? */}
-        <SidebarFooter />
+        {/* <SidebarFooter /> */}
       </div>
 
       <Drawer variant="temporary" anchor="left" open={isDrawerOpen} onClose={onDrawerToggle}>

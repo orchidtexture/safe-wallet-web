@@ -10,15 +10,15 @@ import {
   Accordion,
   useMediaQuery,
   Box,
+  Link,
 } from '@mui/material'
 import { useRouter } from 'next/router'
-import { CREATE_SAFE_EVENTS, LOAD_SAFE_EVENTS } from '@/services/analytics/events/createLoadSafe'
+import { CREATE_SAFE_EVENTS } from '@/services/analytics/events/createLoadSafe'
 import Track from '../common/Track'
 import { AppRoutes } from '@/config/routes'
 import SafeList from '@/components/sidebar/SafeList'
 import css from './styles.module.css'
 import NewSafeIcon from '@/public/images/welcome/new-safe.svg'
-import LoadSafeIcon from '@/public/images/welcome/load-safe.svg'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { useTheme } from '@mui/material/styles'
 import { DataWidget } from '@/components/welcome/DataWidget'
@@ -89,15 +89,18 @@ const NewSafe = () => {
             color="static.main"
             mb={1}
           >
-            Welcome to {'Safe{Wallet}'}
+            Welcome to {'Kondor[TMP]'}
           </Typography>
 
           <Typography mb={5} color="static.main">
-            The most trusted decentralized custody protocol and collective asset management platform.
+            Treasury Management System for crypto-funded companies. Powered by
+            <Link color={'#000'} href={'https://safe.global/wallet'}>
+              &nbsp;Safe&#123;WALLET&#125;
+            </Link>
           </Typography>
 
           <Grid container spacing={3} sx={{ maxWidth: '800px' }}>
-            <Grid item xs={12} lg={6}>
+            <Grid item>
               <Paper className={css.createAddCard}>
                 <SvgIcon component={NewSafeIcon} inheritViewBox sx={{ width: '42px', height: '42px' }} />
                 <Typography variant="h3" fontWeight={700} mb={1} mt={3}>
@@ -105,7 +108,7 @@ const NewSafe = () => {
                 </Typography>
 
                 <Typography variant="body2" mb={3}>
-                  A new Account that is controlled by one or multiple owners.
+                  A new Account for your company that is controlled by one or multiple owners.
                 </Typography>
 
                 <span style={{ flex: 1 }} />
@@ -125,7 +128,7 @@ const NewSafe = () => {
               </Paper>
             </Grid>
 
-            <Grid item xs={12} lg={6}>
+            {/* <Grid item xs={12} lg={6}>
               <Paper className={css.createAddCard}>
                 <SvgIcon component={LoadSafeIcon} inheritViewBox sx={{ width: '42px', height: '42px' }} />
                 <Typography variant="h3" fontWeight={700} mb={1} mt={3}>
@@ -151,7 +154,7 @@ const NewSafe = () => {
                   </Button>
                 </Track>
               </Paper>
-            </Grid>
+            </Grid> */}
           </Grid>
         </div>
       </Grid>

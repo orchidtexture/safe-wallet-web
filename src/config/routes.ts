@@ -48,4 +48,8 @@ export const AppRoutes = {
     index: '/transactions',
     history: '/transactions/history',
   },
+  batch: {
+    index: '/batch',
+    history: 'batch/history',
+  },
 }

@@ -1,0 +1,7 @@
+version: '3'
+services:
+  myapp:
+    build:
+      context: .  # Directorio actual donde se encuentra el Dockerfile
+    ports:
+      - "8080:8080"  # Mapea el puerto 8080 en tu máquina host al puerto 80 en el contenedor

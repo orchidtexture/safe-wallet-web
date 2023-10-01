@@ -10,7 +10,7 @@ export const GATEWAY_URL_STAGING = process.env.NEXT_PUBLIC_GATEWAY_URL_STAGING |
 // Magic numbers
 export const POLLING_INTERVAL = 15_000
 export const BASE_TX_GAS = 21_000
-export const LS_NAMESPACE = 'SAFE_v2__'
+export const LS_NAMESPACE = 'KONDOR_TMP__'
 export const LATEST_SAFE_VERSION = process.env.NEXT_PUBLIC_SAFE_VERSION || '1.3.0'
 
 // Access keys
@@ -39,6 +39,7 @@ export const SAFE_APPS_INFURA_TOKEN = process.env.NEXT_PUBLIC_SAFE_APPS_INFURA_T
 export const SAFE_APPS_THIRD_PARTY_COOKIES_CHECK_URL = 'https://third-party-cookies-check.gnosis-safe.com'
 export const SAFE_APPS_DEMO_SAFE_MAINNET = 'eth:0xfF501B324DC6d78dC9F983f140B9211c3EdB4dc7'
 export const SAFE_APPS_SDK_DOCS_URL = 'https://docs.safe.global/safe-core-aa-sdk/safe-apps'
+export const SAFE_APPS_BATCH_PAYMENTS = process.env.NEXT_PUBLIC_BATCH_PAYMENTS || 'http://localhost:3002'
 
 // Google Tag Manager
 export const GOOGLE_TAG_MANAGER_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID || ''
@@ -87,8 +88,8 @@ export const HelpCenterArticle = {
 } as const
 
 // Social
-export const DISCORD_URL = 'https://chat.safe.global'
-export const TWITTER_URL = 'https://twitter.com/safe'
+export const DISCORD_URL = ''
+export const TWITTER_URL = 'https://twitter.com/kondorfinance'
 
 // Legal
 export const IS_OFFICIAL_HOST = process.env.NEXT_PUBLIC_IS_OFFICIAL_HOST || false

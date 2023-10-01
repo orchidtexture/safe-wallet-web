@@ -5,8 +5,9 @@ import HomeIcon from '@/public/images/sidebar/home.svg'
 import AssetsIcon from '@/public/images/sidebar/assets.svg'
 import TransactionIcon from '@/public/images/sidebar/transactions.svg'
 import ABIcon from '@/public/images/sidebar/address-book.svg'
-import AppsIcon from '@/public/images/apps/apps-icon.svg'
 import SettingsIcon from '@/public/images/sidebar/settings.svg'
+import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange'
+import HubIcon from '@mui/icons-material/Hub'
 import { SvgIcon } from '@mui/material'
 
 export type NavItem = {
@@ -16,19 +17,33 @@ export type NavItem = {
   badge?: boolean
 }
 
-export const navItems: NavItem[] = [
-  {
-    label: 'Home',
-    icon: <SvgIcon component={HomeIcon} inheritViewBox />,
-    href: AppRoutes.home,
-  },
+// multiple lists by category
+
+export const dashboardNavItem: NavItem = {
+  label: 'Dashboard',
+  icon: <SvgIcon component={HomeIcon} inheritViewBox />,
+  href: AppRoutes.home,
+}
+
+export const settingsNavItem: NavItem = {
+  label: 'Settings',
+  icon: <SvgIcon component={SettingsIcon} inheritViewBox />,
+  href: AppRoutes.settings.setup,
+}
+
+export const paymentsNavItems: NavItem[] = [
   {
     label: 'Assets',
     icon: <SvgIcon component={AssetsIcon} inheritViewBox />,
     href: AppRoutes.balances.index,
   },
   {
-    label: 'Transactions',
+    label: 'Batch Payments',
+    icon: <SvgIcon component={AssetsIcon} inheritViewBox />,
+    href: AppRoutes.batch.index,
+  },
+  {
+    label: 'History',
     icon: <SvgIcon component={TransactionIcon} inheritViewBox />,
     href: AppRoutes.transactions.history,
   },
@@ -37,15 +52,26 @@ export const navItems: NavItem[] = [
     icon: <SvgIcon component={ABIcon} inheritViewBox />,
     href: AppRoutes.addressBook,
   },
+]
+
+export const fiatNavItems: NavItem[] = [
   {
-    label: 'Apps',
-    icon: <SvgIcon component={AppsIcon} inheritViewBox />,
-    href: AppRoutes.apps.index,
+    label: '[coming soon]',
+    icon: <CurrencyExchangeIcon />,
+    href: '#',
   },
+]
+
+export const defiNavItems: NavItem[] = [
+  // {
+  //   label: 'Apps',
+  //   icon: <SvgIcon component={AppsIcon} inheritViewBox />,
+  //   href: AppRoutes.apps.index,
+  // },
   {
-    label: 'Settings',
-    icon: <SvgIcon component={SettingsIcon} inheritViewBox />,
-    href: AppRoutes.settings.setup,
+    label: '[coming soon]',
+    icon: <HubIcon />,
+    href: '#',
   },
 ]
 
@@ -61,6 +87,17 @@ export const transactionNavItems = [
   {
     label: 'Messages',
     href: AppRoutes.transactions.messages,
+  },
+]
+
+export const batchPaymentsNavItems = [
+  {
+    label: 'Create',
+    href: AppRoutes.batch.index,
+  },
+  {
+    label: 'History',
+    href: AppRoutes.batch.index,
   },
 ]
 
